@@ -15,3 +15,18 @@ In this lesson, you will learn learn how to build a basic information retrieval 
 * Information Retrieval is the task of gathering resources that are revelant to a user's information needs. We use NLP to process documents and extract information. In this lesson, we will be building a document retrieval system that matches user queries with documents in the CAPEC database. 
 * There are many different design decisions that comprise an information retrieval system. Two key factors are *document representation* and *document similarity*. 
 
+**Document Representation**
+* How the heck do we teach computers to understand human language in documents?! There are many methods that draw from the *vector space model*, which represents queries and documents as vectors in a common vector space.
+* The vector space model is a V-dimensional space, where V is the vocabulary (set of all words used in documents). Each term in the vocabulary is an axis of the space. 
+* Each document, *d* has a position in the vector space that is determined by the words and their frequencies found in *d*. Again, how we choose to compute documents' positions in the vector space is a key design decision. For this lesson, we will implement tf-idf, but I encourage you to explore other vectorization options, such as [doc2vec](https://cs.stanford.edu/~quocle/paragraph_vector.pdf), and decide which works best for your data domain. 
+
+<img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/vector-space-model-diagram.png" width="400" height="400"> <img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/tfidf-diagram.png" width="450" height="400">
+
+<figure>
+    <img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/vector-space-model-diagram.png" height="400" width="400"> <figcaption>Diagram 1: Vector Space Model</figcaption> <img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/tfidf-diagram.png" width="450" height="400><figcaption>Diagram 2: TF-IDF</figcaption>
+</figure>
+
+**Document Similarity**
+* Once we project our documents into the vector space model, we can compute. 
+
+
