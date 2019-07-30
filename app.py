@@ -1,6 +1,5 @@
 from flask import Flask,render_template,url_for,request
 import csv
-import pickle
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
