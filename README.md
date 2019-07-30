@@ -42,3 +42,6 @@ In this lesson, you will learn learn how to build a basic information retrieval 
 * Depending on your objective, there are a variety of document similarity measures you may choose from. For this project, we will use cosine distance, but I encourage you to check out [Jaccard distance](https://www.statisticshowto.datasciencecentral.com/jaccard-index/) and [Euclidean distance](http://rosalind.info/glossary/euclidean-distance/) as well. 
 * *Cosine similarity* computes the dot product for normalized vectors. Our document corpus is represented as a *D x V* matrix, and our query document is represented as a *1 x V* matrix, so we can find the cosine similarity between the query document and each document in our corpus to find which documents match our query! See *Document 1* for a visual representation of cosine similarity. 
 
+#Project Directions:
+
+
