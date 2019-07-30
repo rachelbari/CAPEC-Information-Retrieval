@@ -27,7 +27,7 @@ In this lesson, you will learn learn how to build a basic information retrieval 
   - [More Notes on TF-IDF](https://web.stanford.edu/class/cs276/handouts/lecture6-tfidf-handout-1-per.pdf)
 
 <div>
-<img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/vsm-diagram.png" width="375" height="375"> <img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/tfidf-diagram.png" width="425" height="375">
+<img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/vsm-diagram.png" width="375" height="375"> <img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/count-matrix-diagram.png" width="425" height="375">
 </div>
 <br>
 <br>
