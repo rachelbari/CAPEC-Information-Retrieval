@@ -12,8 +12,10 @@ In this lesson, you will learn learn how to build a basic information retrieval 
 * "Attack Patterns" are descriptions of the common attributes and approaches employed by adversaries to exploit known weaknesses in cyber-enabled capabilities. Attack patterns define the challenges that an adversary may face and how they go about solving it. They derive from the concept of design patterns applied in a destructive rather than constructive context and are generated from in-depth analysis of specific real-world exploit examples. Attack patterns help those developing applications, or administrating cyber-enabled capabilities to better understand the specific elements of an attack and how to stop them from succeeding.
 
 **Information Retrieval:**
-* Information Retrieval is the task of gathering resources that are revelant to a user's information needs. We use NLP to process documents and extract information. In this lesson, we will be building a document retrieval system that matches user queries with documents in the CAPEC database. 
+* Information Retrieval is the task of gathering resources that are revelant to a user's information needs. We use NLP to process documents and extract information. IR is used everywhere - from question/answering systems to information routing and filtering to IBM Watson on Jeopardy! 
+* In this lesson, we will be building a document retrieval system that matches user queries with documents in the CAPEC database. 
 * There are many different design decisions that comprise an information retrieval system. Two key factors are *document representation* and *document similarity*. 
+
 
 # Document Representation and Similarity
 
@@ -45,6 +47,15 @@ In this lesson, you will learn learn how to build a basic information retrieval 
 # Project Directions:
 
 ## Steps:
+1. Download ```3000.csv``` from [CAPEC](https://capec.mitre.org/data/definitions/3000.html)
+2. Create a web app using Flask (or a micro-framework of your choice). Create routes and html templates for a home page and a search results page. Check out the source code or resources below to get started:
+  - [Flask Quickstart](http://flask.pocoo.org/docs/1.0/quickstart/)
+  - [Getting Started Tutorial](https://medium.com/techkylabs/getting-started-with-python-flask-framework-part-1-a4931ce0ea13)
+3. Create a form on your home page where a user can submit a search query
+4. Load the ```3000.csv``` file and save relevant data (ie title, description, id)
+5. Implement TFIDF using Scikit-learn or Gensim - or build your own vectorizer from scratch!
+6. Compute document similarity between your TFIDF-transformed document matrix and query document
+7. Return relevant documents by returning the top-n similar documents, some minimum threshold score, or a combination of both. In the source code, we return the top 3 documents and use a minimum threshold score of 0.1
 
 
 
