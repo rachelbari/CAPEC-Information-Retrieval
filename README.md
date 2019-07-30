@@ -21,8 +21,10 @@ In this lesson, you will learn learn how to build a basic information retrieval 
 * Each document, *d* has a position in the vector space that is determined by the words and their frequencies found in *d*. Again, how we choose to compute documents' positions in the vector space is a key design decision. For this lesson, we will implement tf-idf, but I encourage you to explore other vectorization options, such as [doc2vec](https://cs.stanford.edu/~quocle/paragraph_vector.pdf), and decide which works best for your data domain. 
 
 <div>
-<img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/vsm-diagram.png" width="350" height="350"> <img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/tfidf-diagram.png" width="400" height="350">
+<img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/vsm-diagram.png" width="375" height="375"> <img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/tfidf-diagram.png" width="425" height="375">
 </div>
+
+
 
 **Document Similarity**
 * Once we project our documents into the vector space model, we can compute. 
