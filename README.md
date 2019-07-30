@@ -15,16 +15,21 @@ In this lesson, you will learn learn how to build a basic information retrieval 
 * Information Retrieval is the task of gathering resources that are revelant to a user's information needs. We use NLP to process documents and extract information. In this lesson, we will be building a document retrieval system that matches user queries with documents in the CAPEC database. 
 * There are many different design decisions that comprise an information retrieval system. Two key factors are *document representation* and *document similarity*. 
 
-**Document Representation**
+# Document Representation and Similarity
+
+**Vector Space Model**
 * How the heck do we teach computers to understand human language in documents?! There are many methods that draw from the *vector space model*, which represents queries and documents as vectors in a common vector space.
 * The vector space model is a V-dimensional space, where V is the vocabulary (set of all words used in documents). Each term in the vocabulary is an axis of the space. In order to compute document similarity, we will project our documents and the user query in the vector space, then calculate which documents are closest to the query. See *Diagram 1*.
   - [More Notes on Vector Space Model](https://ils.unc.edu/courses/2013_spring/inls509_001/lectures/06-VectorSpaceModel.pdf)
 * Each document, *d* has a position in the vector space that is determined by the words and their frequencies found in *d*. Again, how we choose to compute documents' positions in the vector space is a key design decision. For this lesson, we will implement tf-idf, but I encourage you to explore other vectorization options, such as [doc2vec](https://cs.stanford.edu/~quocle/paragraph_vector.pdf), and decide which works best for your data domain. 
+
+**TF-IDF Weighting**
 * To start, we will use a *bag of words (BoW) model*, a vector representation that ignores word ordering in a document.
   - [More Notes on Bag of Words](https://medium.com/greyatom/an-introduction-to-bag-of-words-in-nlp-ac967d43b428)
-* In order to transform our documents into the vector space, we can convert a collection of text documents to a matrix of token counts, with dimensions *V x D*, where V is the number of words in the vocabulary and D is the number of documents. Each document, *d* is represented as a count vector, meaning it contains the number of times each word in V appears in *d*. *Diagram 2* shows the count vectors for each document.
+* In order to transform our documents into the vector space, we can convert a collection of text documents to a matrix of token counts, with dimensions *D x V*, where V is the number of words in the vocabulary and D is the number of documents. Each document, *d* is represented as a count vector, meaning it contains the number of times each word in V appears in *d*. *Diagram 2* shows the count vectors for each document.
 * TF-IDF is a weighting scheme that we apply to the term-document count matrix to reflect "how important" a word is to a document in a collection. Term frequency (tf) is the number of times a term, *t* appears in document *d*, and inverse document frequency (idf) is the inverse of the number of documents that contain *t*. Word importance increases proportionally to the number of times a word appears in the document, but it is offset by the frequency of the word in the corpus.TF-IDF weighting modifies the count vector values found in *Diagram 2* to more accurately represent word importance in a document. 
   - [More Notes on TF-IDF](https://web.stanford.edu/class/cs276/handouts/lecture6-tfidf-handout-1-per.pdf)
+* In my source code, I use the TfidfVectorizer from Scikit-Learn. I also recommend using Gensim for TF-IDF models, or Word2Vec/Doc2Vec models. 
 
 <div>
 <img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/vsm-diagram.png" width="375" height="375"> <img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/count-matrix-diagram.png" width="425" height="375">
@@ -32,7 +37,8 @@ In this lesson, you will learn learn how to build a basic information retrieval 
 <br>
 <br>
 
-**Document Similarity**
-* Once we project our documents into the vector space model, we can compute. 
-
+**Measuring Similarity**
+* Once we project our documents into the vector space model, we can find how similar two documents are.
+* Depending on your objective, there are a variety of document similarity measures you may choose from. For this project, we will use cosine distance, but I encourage you to check out [Jaccard distance](https://www.statisticshowto.datasciencecentral.com/jaccard-index/) and [Euclidean distance](http://rosalind.info/glossary/euclidean-distance/) as well. 
+* *Cosine similarity* computes the dot product for normalized vectors. Our document corpus is represented as a *D x V* matrix, and our query document is represented as a *1 x V* matrix, so we can find the cosine similarity between the query document and each document in our corpus to find which documents match our query!
 
