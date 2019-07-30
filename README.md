@@ -20,8 +20,8 @@ In this lesson, you will learn learn how to build a basic information retrieval 
 * The vector space model is a V-dimensional space, where V is the vocabulary (set of all words used in documents). Each term in the vocabulary is an axis of the space. 
 * Each document, *d* has a position in the vector space that is determined by the words and their frequencies found in *d*. Again, how we choose to compute documents' positions in the vector space is a key design decision. For this lesson, we will implement tf-idf, but I encourage you to explore other vectorization options, such as [doc2vec](https://cs.stanford.edu/~quocle/paragraph_vector.pdf), and decide which works best for your data domain. 
 
-<div>
-<img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/tfidf-diagram.png" width="350" height="350"> <img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/vsm-diagram.png" width="425" height="375"> 
+<div style="position:relative">
+<img style="position:absolute; bottom:0"src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/tfidf-diagram.png" width="350" height="350"> <img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/vsm-diagram.png" width="425" height="375"> 
 </div>
 
 **Document Similarity**
