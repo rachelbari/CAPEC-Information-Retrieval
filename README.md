@@ -27,6 +27,11 @@ In this lesson, you will learn learn how to build a basic information retrieval 
     <figcaption>Diagram 1: Vector Space Model</figcaption>
 </figure>
 
+<figure>
+    <img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/tfidf-diagram.png" width="450" height="400">
+    <figcaption>Diagram 2: TF-IDF</figcaption>
+</figure>
+
 **Document Similarity**
 * Once we project our documents into the vector space model, we can compute. 
 
