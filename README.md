@@ -23,8 +23,8 @@ In this lesson, you will learn learn how to build a basic information retrieval 
 <div>
 <img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/vsm-diagram.png" width="375" height="375"> <img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/tfidf-diagram.png" width="425" height="375">
 </div>
-
-
+<br>
+<br>
 
 **Document Similarity**
 * Once we project our documents into the vector space model, we can compute. 
