@@ -13,5 +13,5 @@ In this lesson, you will learn learn how to build a basic information retrieval 
 
 **Information Retrieval:**
 * Information Retrieval is the task of gathering resources that are revelant to a user's information needs. We use NLP to process documents and extract information. In this lesson, we will be building a document retrieval system that matches user queries with documents in the CAPEC database. 
-* There are many different design decisions that comprise an information retrieval system. Two key factors are *document representation* and *document similarity*
+* There are many different design decisions that comprise an information retrieval system. Two key factors are *document representation* and *document similarity*. 
 
