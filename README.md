@@ -1,5 +1,6 @@
 # Information Retrieval for Common Attack Pattern Enumeration and Classification
-In this lesson, you will learn learn how to build a basic information retrieval app to search for common attack patterns found on the MITRE CAPEC database. Through this lesson, you will learn about attack patterns employed by adversaries, and natural language processing fundamentals.
+In this lesson, you will learn about attack patterns employed by adversaries, as well as information retrieval fundamentals. Then you will 
+build a basic information retrieval app to search for common attack patterns found on the MITRE CAPEC database.
 
 # Lesson Skills
 * Commmon Attack Patterns
@@ -34,7 +35,7 @@ In this lesson, you will learn learn how to build a basic information retrieval 
 * In my source code, I use the TfidfVectorizer from Scikit-Learn. I also recommend using Gensim for TF-IDF models, or Word2Vec/Doc2Vec models. 
 
 <div>
-<img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/vsm-diagram.png" width="375" height="375"> <img src="https://github.com/rachelbari/CAPEC-Information-Retrieval/blob/master/static/count-matrix-diagram.png" width="425" height="375">
+<img src="https://github.com/rachelsterneck/CAPEC-Information-Retrieval/blob/master/static/vsm-diagram.png" width="375" height="375"> <img src="https://github.com/rachelsterneck/CAPEC-Information-Retrieval/blob/master/static/count-matrix-diagram.png" width="425" height="375">
 </div>
 <br>
 <br>
