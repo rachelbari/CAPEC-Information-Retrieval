@@ -21,7 +21,7 @@ build a basic information retrieval app to search for common attack patterns fou
 # Document Representation and Similarity
 
 **Vector Space Model**
-* How the heck do we teach computers to understand human language in documents?! There are many methods that draw from the *vector space model*, which represents queries and documents as vectors in a common vector space.
+* How on earth do we teach computers to understand human language in documents?! There are many methods that draw from the *vector space model*, which represents queries and documents as vectors in a common vector space.
 * The vector space model is a V-dimensional space, where V is the vocabulary (set of all words used in documents). Each term in the vocabulary is an axis of the space. In order to compute document similarity, we will project our documents and the user query in the vector space, then calculate which documents are closest to the query. See *Diagram 1*.
   - [More Notes on Vector Space Model](https://ils.unc.edu/courses/2013_spring/inls509_001/lectures/06-VectorSpaceModel.pdf)
 * Each document, *d* has a position in the vector space that is determined by the words and their frequencies found in *d*. Again, how we choose to compute documents' positions in the vector space is a key design decision. For this lesson, we will implement tf-idf, but I encourage you to explore other vectorization options, such as [doc2vec](https://cs.stanford.edu/~quocle/paragraph_vector.pdf), and decide which works best for your data domain. 
